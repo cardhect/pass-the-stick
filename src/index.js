@@ -4,7 +4,7 @@ import { DataController } from "./DataController";
 import { DisplayController } from "./DisplayController";
 import  alertSound from "./audio/alertSound.mp3";
 
-const alertNoise = new Audio(alertSound);
+let alertNoise;
 
 
 const DataControl = new DataController();
@@ -26,6 +26,10 @@ userInputSubmitBtn.addEventListener("click", () => {
 	DisplayControl.updateCounter(HoldTimer);
 	//This will show the session display after user enters inputs
 	DisplayControl.updateDisplay();
+	if(!alertNoise){
+        alertNoise = new Audio(alertSound);
+    }
+
 	
 });
 
