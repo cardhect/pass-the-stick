@@ -1,0 +1,31 @@
+body {
+    bbackground: rgb(113,9,121);
+    background: linear-gradient(90deg, rgba(113,9,121,1) 35%, rgba(0,234,255,1) 100%);
+    color: white;
+}
+
+#session-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hide {
+    display: none;
+}
+
+.holding {
+    color: white;
+    background-color: green;
+}
+
+.passing {
+    color: white;
+    background-color: red;
+}
+
+#countdown {
+    padding: 10%;
+    border-radius: 10px;
+    font-size: 2em;
+    font-family: arial;
+}
