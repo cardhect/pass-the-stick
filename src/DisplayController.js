@@ -47,13 +47,15 @@ export class DisplayController {
 	}
 	//changes between user form or session elements.
 	updateDisplay() {
-		const userInputForm = document.getElementById("user-set-form");
+		let userInputForm = document.getElementById("user-set-form");
 
 		userInputForm.classList.toggle("hide");
+		userInputForm.classList.toggle('user-set-form');
 
-		const sessionDisplay = document.getElementById("session-display");
+		let sessionDisplay = document.getElementById("session-display");
 
 		sessionDisplay.classList.toggle("hide");
+		sessionDisplay.classList.toggle("session-display-format");
 		
 	}
 

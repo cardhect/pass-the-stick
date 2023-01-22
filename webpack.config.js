@@ -16,7 +16,11 @@ module.exports = {
       {
         test: /\.mp3$/,
         loader: 'file-loader'
-      }
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
 };

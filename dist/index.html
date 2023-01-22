@@ -7,20 +7,27 @@
     <title>Pass The Stick</title>
 </head>
 <body>
+    <div class="main-container">
+        <h1 class="main-title">next Up</h1>
+        <img class="logo-img" src="/src/passinghands.png" alt="">
+
+    </div>
     
-    <form action="" id="user-set-form" novalidate onsubmit="return false" >
+    <form action="" class="user-form-format" id="user-set-form" novalidate onsubmit="return false" >
         <fieldset>
             <legend>How much time to hold the stick?</legend>
-            <label for="holding-time">Minutes : Seconds</label>
+            <label for="holding-time">Minutes / Seconds: </label>
             <input type="number" name="holding-time" id="holding-min" min="0" max="20" value="0">
+            <span><label for="">:</label></span>
             <input type="number" name="holding-time" id="holding-sec" min="0" max="59" value="0">
             
             
         </fieldset>
         <fieldset>
             <legend>How much time to pass the stick?</legend>
-            <label for="passing-time">Minutes : Seconds</label>
+            <label for="passing-time">Minutes / Seconds: </label>
             <input type="number" name="passing-time" id="passing-min" min="0" max="20" value="0">
+            <span><label for="">:</label></span>
             <input type="number" name="passing-time" id="passing-sec" min="0" max="59" value="0">
         </fieldset>
         <button id="userInputSubmit" type="submit">Submit</button>
@@ -29,10 +36,15 @@
     <div id="session-display" class="hide">
         <p id="countdown"  class="holding"></p>
         <div id="buttons-container">
-            <button class="control-btns" id="start-btn">Start</button>
-            <button class="control-btns" id="pause-btn">Pause</button>
-            <button class="control-btns" id="reset-btn">Reset</button>
-            <button class="control-btns" id="end-btn">End</button>
+            <div class="button-row-format">
+                <button class="control-btns" id="start-btn">Start</button>
+                <button class="control-btns" id="pause-btn">Pause</button>
+            </div>
+            <div class="button-row-format">
+                <button class="control-btns" id="reset-btn">Reset</button>
+                <button class="control-btns" id="end-btn">End</button>
+
+            </div>
         </div>
 
     </div>

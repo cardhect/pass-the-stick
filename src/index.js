@@ -105,7 +105,6 @@ function timerLoopInterval(Timer) {
 		if (countdownEleText == '-1:0-1') {
 			// setTimeout(() => {
 				console.log(countdownEleText);
-				alertNoise.play();
 				DisplayControl.changeCounterDisplay();
 				const currentCounter = document.getElementById('countdown').className;
 				
@@ -116,6 +115,7 @@ function timerLoopInterval(Timer) {
 					PassTimer.stop();
 					return;
 				} else if (currentCounter == 'passing') {
+					alertNoise.play();
 					PassTimer.reset();
 					PassTimer.start();
 					DisplayControl.updateCounter(PassTimer);
