@@ -6,6 +6,11 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: '[name].js',
+      assetModuleFilename: 'src/assets/images/[name].[ext]'
+     }
   },
   module: {
     rules: [
