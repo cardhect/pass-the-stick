@@ -1,12 +1,23 @@
+@media only screen and (max-width: 400px) {
+    .logo-img {
+        width: 200px;
+    }
+    #countdown {
+        padding: 10%;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
 body {
-    /* background: rgb(113,9,121);
-    background: linear-gradient(90deg, rgba(113,9,121,1) 35%, rgba(0,234,255,1) 100%); */
     color: white;
-    background: url(./brooklyn-MO5qO9xpZhA-unsplash.jpg) no-repeat center center fixed; 
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover; 
+    background: url(http://127.0.0.1:5500/dist/src/assets/images/brooklyn-MO5qO9xpZhA-unsplash..jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 fieldset {
     border: 0;
@@ -15,21 +26,28 @@ fieldset {
     align-items: stretch;
     flex-direction: row;
 }
+legend {
+    font-weight: bold;
+}
 
 @font-face {
     font-family: ThereBrat;
     src: url(therebrat.ttf);
 }
 .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    text-align: center;
 }
 .main-title {
     font-family: ThereBrat;
     color: white;
     margin-bottom: -30px;
     font-size: 3em;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .user-form-format {
@@ -39,10 +57,12 @@ fieldset {
     border: 2px solid white;
     padding: 10px;
     align-items: center;
+    width: fit-content;
 }
 
 .logo-img {
-    width: 65%;
+    max-width: 300px;
+
 }
 
 .session-display-format {
@@ -69,13 +89,16 @@ fieldset {
 }
 
 #countdown {
-    padding: 10%;
+    padding: 20%;
     padding-left: 20%;
     padding-right: 20%;
     border-radius: 10px;
     font-size: 3em;
     font-family: arial;
     margin-top: 0;
+    width: -webkit-fill-available;
+    text-align: center;
+    margin-bottom: 5%;
 }
 
 #buttons-container{
@@ -104,7 +127,7 @@ fieldset {
     box-shadow: none;
     text-shadow: none;
     border: none;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .control-btns:hover{
     color: white;

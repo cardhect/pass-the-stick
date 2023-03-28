@@ -24,6 +24,14 @@ userInputSubmitBtn.addEventListener("click", () => {
 	PassTimer.reset();
 	//Updates counter with user inputs
 	DisplayControl.updateCounter(HoldTimer);
+
+	//If timer is ended in the passing timer
+	let currentTimerClass = document.getElementById("countdown").className;
+	if (currentTimerClass === 'passing') {
+		document.getElementById("countdown").className = "holding";
+		
+	}
+
 	//This will show the session display after user enters inputs
 	DisplayControl.updateDisplay();
 	if(!alertNoise){
@@ -62,14 +70,17 @@ for (let i = 0; i < controlBtns.length; i++) {
 			if (countdownTimer.className == "holding") {	
 				HoldTimer.reset();
 			} else if (countdownTimer.className == 'passing') {
+				//Figure out what happens here
 				PassTimer.reset();
 			}
 		}
 		if (controlButtons.id === "end-btn") {
 			if (countdownTimer.className == "holding") {	
 				HoldTimer.stop();
+				HoldTimer.reset();
 			} else if (countdownTimer.className == 'passing') {
 				PassTimer.stop();
+				PassTimer.reset();
 			}
 			//this should take you back to the user input display
 			DisplayControl.updateDisplay();

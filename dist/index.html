@@ -17,19 +17,19 @@
     <form action="" class="user-form-format" id="user-set-form" novalidate onsubmit="return false" >
         <fieldset>
             <legend>How much time to hold the stick?</legend>
-            <label for="holding-time">Minutes / Seconds: </label>
-            <input type="number" name="holding-time" id="holding-min" min="0" max="20" value="0">
-            <span><label for="">:</label></span>
-            <input type="number" name="holding-time" id="holding-sec" min="0" max="59" value="0">
+            <input type="number" name="holding-time" id="holding-min" min="0" max="20" value="0" style="margin-right: 1%">
+            <label for="holding-time">Minutes</label>
+            <input type="number" name="holding-time" id="holding-sec" min="0" max="59" value="0" style="margin-left: 5%; margin-right: 1%">
+            <span><label for="">Seconds</label></span>
             
             
         </fieldset>
         <fieldset>
             <legend>How much time to pass the stick?</legend>
-            <label for="passing-time">Minutes / Seconds: </label>
-            <input type="number" name="passing-time" id="passing-min" min="0" max="20" value="0">
-            <span><label for="">:</label></span>
-            <input type="number" name="passing-time" id="passing-sec" min="0" max="59" value="0">
+            <input type="number" name="passing-time" id="passing-min" min="0" max="20" value="0" style="margin-right: 1%">
+            <label for="passing-time">Minutes</label>
+            <input type="number" name="passing-time" id="passing-sec" min="0" max="59" value="0" style="margin-left: 5%; margin-right: 1%">
+            <span><label for="">Seconds</label></span>
         </fieldset>
         <button id="userInputSubmit" type="submit">Submit</button>
     </form>
