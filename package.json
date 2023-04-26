@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/cardhect/pass-the-stick/issues"
   },
-  "homepage": "https://github.com/cardhect/pass-the-stick#readme",
+  "homepage": "https://github.com/cardhect/pass-the-stick",
   "devDependencies": {
     "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",
