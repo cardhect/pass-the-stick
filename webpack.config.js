@@ -1,7 +1,14 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: "development",
+  plugins:[
+    new HtmlWebpackPlugin({
+      title: 'Next Up Conversation App',
+      favicon: '/src/passinghands.png',
+    })
+  ],
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',

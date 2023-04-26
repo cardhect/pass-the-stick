@@ -3,6 +3,7 @@ import { Timer } from "./Timer";
 import { DataController } from "./DataController";
 import { DisplayController } from "./DisplayController";
 import  alertSound from "./audio/alertSound.mp3";
+import  nextUpLogo  from "./next-up-logo.png";
 
 let alertNoise;
 
@@ -13,6 +14,8 @@ const DisplayControl = new DisplayController();
 export const HoldTimer = new Timer("HoldTimer");
 export const PassTimer = new Timer("PassTimer");
 
+const logoImg = document.querySelector('.logo-img');
+logoImg.src = nextUpLogo;
 
 
 const userInputSubmitBtn = document.getElementById("userInputSubmit");
