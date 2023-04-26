@@ -3,18 +3,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: "development",
-  plugins:[
-    new HtmlWebpackPlugin({
-      title: 'Next Up Conversation App',
-      favicon: '/src/passinghands.png',
-    })
-  ],
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'src/assets/images/[name].[ext]'
   },
+  plugins:[
+    new HtmlWebpackPlugin({
+      template: './dist/index.html',
+      inject: 'head',
+      favicon: 'src/passinghands.png',
+    })
+  ],
   module: {
     rules: [
       {

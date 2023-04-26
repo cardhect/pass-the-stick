@@ -16,7 +16,7 @@ export const PassTimer = new Timer("PassTimer");
 
 const logoImg = document.querySelector('.logo-img');
 logoImg.src = nextUpLogo;
-
+console.log(logoImg);
 
 const userInputSubmitBtn = document.getElementById("userInputSubmit");
 userInputSubmitBtn.addEventListener("click", () => {
